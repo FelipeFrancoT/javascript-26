@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carinho</title>
+</head>
+<body>
+    <h1>seja bem vindo ao seu carrinho</h1>
+ <script>
+   let nome = window.prompt('Qual é seu nome?')
+   let produto = Number(window.prompt('Qual é o valor do produto?'))
+   let quantidade = Number(window.prompt('Qual é a quantidade?'))
+
+   if (produto <= 0 || quantidade <= 0) {
+       alert('Valor inválido')
+   } else {
+
+       let cal = produto * quantidade
+
+       alert(`Cliente: ${nome}`)
+       alert(`O total será R$ ${cal}`)
+
+       if (cal > 200) {
+           let desconto = cal * 0.10
+           let totalFinal = cal - desconto
+
+           alert(`Você recebeu R$ ${desconto} de desconto`)
+           alert(`Total com desconto: R$ ${totalFinal}`)
+       } 
+       else if (cal > 100) {
+           alert('Você ganhou frete grátis 😎')
+       }
+   }
+</script>
+
+
+</body>
+</html>
