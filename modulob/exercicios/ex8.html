@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loja</title>
+</head>
+<body>
+    <h1 id="titulo">Minha Loja</h1>
+
+    <p class="produto">Camiseta</p>
+    <p class="produto">Tênis</p>
+    <p class="produto">Boné</p>
+
+    <p name="promo">Promoção do dia</p>
+
+    <button onclick="mudar()">Clique aqui</button>
+<button onclick="produto()">Clique aqui tmb</button>
+<button onclick="promo()">Clique aqui para mudar a cor</button>
+<button onclick="modoEscuro()">Modo escuro</button>
+<button onclick="teniscor()">atualizaçao</button>
+<script>
+
+function mudar(){
+    var titulo = document.getElementById("titulo")
+    titulo.innerText = "Loja do Felipe 😎"
+}
+
+function produto(){
+    var produto = document.getElementsByClassName("produto")[0]
+    produto.innerText = "Camiseta Premium"
+}
+
+function promo(){
+    var promo = document.getElementsByName("promo")[0]
+    promo.style.color = "red"
+}
+function modoEscuro(){
+    document.body.style.backgroundColor = "black"
+        document.body.style.color = "white"
+
+}
+function teniscor(){
+      let tenis = document.querySelectorAll(".produto")[1]
+    tenis.innerText = "Tênis Nike"
+
+    let titulocor = document.querySelector("#titulo")
+    titulocor.style.color = "blue"
+}
+</script>
+</body>
+</html>
