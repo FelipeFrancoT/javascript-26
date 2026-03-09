@@ -6,23 +6,28 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>somando valores</h1>
-    <input type="number" name="txtn1" id="txtn1"> 
-    <input type="number" name="txtn2" id="txtn2"> 
-    <input type="button" name="somar" onclick="somar()"> 
-    <div id="res">resultado</div>
+    <h1>Somando valores</h1>
 
-    <script>
-        function somar(){
-            var tn1 =document.getElementById('somar')
-            var tn2 =document.querySelector('#txtn2')
-            var res =document.getElementById('res')
+<input type="number" id="txtn1"> 
+<input type="number" id="txtn2"> 
 
-            var n1 = Number(tn1.value)
-            var n2 = Number(tn2.value)
-            var s = n1 = n2
-            res.innerText = `a soma entre ${n1} e ${n2} é ${s}`
-        }
-    </script>
+<input type="button" value="Somar" onclick="somar()"> 
+
+<div id="res">Resultado</div>
+
+<script>
+function somar(){
+    var tn1 = document.getElementById('txtn1')
+    var tn2 = document.querySelector('#txtn2')
+    var res = document.getElementById('res')
+
+    var n1 = Number(tn1.value)
+    var n2 = Number(tn2.value)
+
+    var s = n1 + n2
+
+    res.innerText = `A soma entre ${n1} e ${n2} é ${s}`
+}
+</script>
 </body>
 </html>
