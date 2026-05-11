@@ -1,7 +1,7 @@
 var pais = "eua"
 if(pais == "brasil"){
-    console.log("cria")
+    console.log("vivendo em brasil voçe e cria")
 }
 else{
-    console.log("estrageiro")
+    console.log(`vivendo em ${pais} voçe e estrageiro`)
 }
